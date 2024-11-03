@@ -3,9 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32B9213B-FDB6-47A0-95FB-F96550A5DA26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{023C18D0-6C4B-446A-90E9-151DF6873E1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepForge.Domain", "src\RepForge.Domain\RepForge.Domain.csproj", "{BDA3CFE4-8665-49E8-ACEC-E678BC167F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepForge.Application", "src\RepForge.Application\RepForge.Application.csproj", "{315D0FD0-6A3B-4888-B989-48C54C54E6D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepForge.Infrastructure", "src\RepForge.Infrastructure\RepForge.Infrastructure.csproj", "{60C0B136-3F9C-40A8-BAE6-224A31062B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepForge.SharedKernel", "src\RepForge.SharedKernel\RepForge.SharedKernel.csproj", "{164E052E-14C9-4E78-AE5A-3E08CC8C50C5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDA3CFE4-8665-49E8-ACEC-E678BC167F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA3CFE4-8665-49E8-ACEC-E678BC167F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA3CFE4-8665-49E8-ACEC-E678BC167F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA3CFE4-8665-49E8-ACEC-E678BC167F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315D0FD0-6A3B-4888-B989-48C54C54E6D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315D0FD0-6A3B-4888-B989-48C54C54E6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315D0FD0-6A3B-4888-B989-48C54C54E6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315D0FD0-6A3B-4888-B989-48C54C54E6D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C0B136-3F9C-40A8-BAE6-224A31062B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C0B136-3F9C-40A8-BAE6-224A31062B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C0B136-3F9C-40A8-BAE6-224A31062B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C0B136-3F9C-40A8-BAE6-224A31062B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164E052E-14C9-4E78-AE5A-3E08CC8C50C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164E052E-14C9-4E78-AE5A-3E08CC8C50C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164E052E-14C9-4E78-AE5A-3E08CC8C50C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164E052E-14C9-4E78-AE5A-3E08CC8C50C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BDA3CFE4-8665-49E8-ACEC-E678BC167F3C} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
+		{315D0FD0-6A3B-4888-B989-48C54C54E6D7} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
+		{60C0B136-3F9C-40A8-BAE6-224A31062B8A} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
+		{164E052E-14C9-4E78-AE5A-3E08CC8C50C5} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4010D6AA-B684-47C2-9001-566ED5D685E5}
