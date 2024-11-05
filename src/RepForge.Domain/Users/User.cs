@@ -1,12 +1,14 @@
-﻿using RepForge.SharedKernel;
+﻿using RepForge.Domain.Shared;
+using RepForge.SharedKernel;
 
 namespace RepForge.Domain.Users;
 public sealed class User : Entity
 {
-    public User(Guid id) 
+    public User(Guid id, Name name)
         : base(id)
     {
+        Name = name;
     }
 
-    public int MyProperty { get; set; }
+    public Name Name { get; }
 }
