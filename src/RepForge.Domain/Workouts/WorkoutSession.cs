@@ -3,6 +3,9 @@ using RepForge.Domain.Shared;
 using RepForge.SharedKernel;
 
 namespace RepForge.Domain.Workouts;
+/// <summary>
+/// A Workout-Session that a user completed based on a created workout.
+/// </summary>
 public sealed class WorkoutSession : Entity
 {
     public WorkoutSession(

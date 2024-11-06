@@ -2,6 +2,9 @@
 using RepForge.SharedKernel;
 
 namespace RepForge.Domain.Excercises;
+/// <summary>
+/// Exercise-Session that represents an completed a exercise once.
+/// </summary>
 public sealed class ExcerciseSession : Entity
 {
     public ExcerciseSession(
@@ -16,10 +19,24 @@ public sealed class ExcerciseSession : Entity
         Repetitions = repetitions;
         Duration = duration;
     }
-
+    /// <summary>
+    /// Id of the belonging Workout-Session.
+    /// </summary>
     public Guid WorkoutSessionId { get; }
+
+    /// <summary>
+    /// Id of the belonging Exercise.
+    /// </summary>
     public Guid ExcerciseId { get; }
+
+    /// <summary>
+    /// Count of repetitions.
+    /// </summary>
     public Repetitions Repetitions { get; }
+
+    /// <summary>
+    /// Duration of the Exercise-Session.
+    /// </summary>
     public Duration Duration { get; }
 
 }

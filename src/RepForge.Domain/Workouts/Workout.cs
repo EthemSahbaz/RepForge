@@ -2,6 +2,9 @@
 using RepForge.SharedKernel;
 
 namespace RepForge.Domain.Workouts;
+/// <summary>
+/// Workout entity representing a workout that a user created with different exercises.
+/// </summary>
 public sealed class Workout : Entity
 {
     public Workout(
@@ -10,6 +13,8 @@ public sealed class Workout : Entity
     {
         Name = name;
     }
-
+    /// <summary>
+    /// Name of the workout.
+    /// </summary>
     public Name Name { get; }
 }
