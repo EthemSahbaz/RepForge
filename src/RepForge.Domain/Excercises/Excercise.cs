@@ -7,24 +7,31 @@ namespace RepForge.Domain.Excercises;
 /// </summary>
 public sealed class Excercise : Entity
 {
-    private Excercise(Guid id, Name name) : base(id)
+    private Excercise(Guid id, Guid userId, Name name) : base(id)
     {
+        UserId = userId;
         Name = name;
     }
+
+    /// <summary>
+    /// Id of the user.
+    /// </summary>
+    public Guid UserId { get; }
+
     /// <summary>
     /// Name of the Exercise.
     /// </summary>
-
     public Name Name { get; }
 
     /// <summary>
     /// Creates an exercise.
     /// </summary>
     /// <param name="id">Id of the exercise.</param>
+    /// <param name="userId">Id of the user.</param>
     /// <param name="name">Name of the exercise.</param>
     /// <returns>Returns an valid exercise.</returns>
-    public static Excercise Create(Guid id, Name name)
+    public static Excercise Create(Guid id, Guid userId, Name name)
     {
-        return new Excercise(id, name);
+        return new Excercise(id, userId ,name);
     }
 }

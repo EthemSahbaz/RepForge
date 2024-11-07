@@ -8,17 +8,31 @@ namespace RepForge.Domain.Workouts;
 /// </summary>
 public sealed class WorkoutSession : Entity
 {
+    private readonly List<ExcerciseSession> _completedExcercises = new();
     public WorkoutSession(
         Guid id,
-        Guid workoutId,
-        List<ExcerciseSession> excerciseSessions,
-        Duration duration) : base(id)
+        Guid workoutId) : base(id)
     {
         WorkoutId = workoutId;
-        ExcerciseSessions = excerciseSessions;
-        Duration = duration;
     }
     public Guid WorkoutId { get; }
-    public List<ExcerciseSession> ExcerciseSessions { get; }
+    public WorkoutState State { get; private set; } = WorkoutState.NotStarted;
+    public DateTime StartTime { get; }
+    public DateTime EndTime { get; }
     public Duration Duration { get; }
+
+    public Result StartSession()
+    {
+        if (State != WorkoutState.NotStarted)
+        {
+            return Result.Failure(new Error("WorkoutSession", "Can not Start Session"));
+        }
+
+        State = WorkoutState.Started;
+        
+        // TODO: Set Starttime here with IDateTimeProvider.
+
+        return Result.Success();
+    }
+
 }
