@@ -5,9 +5,9 @@ namespace RepForge.Domain.Excercises;
 /// Setting for a workout, representing how often an exercise needs
 /// to be completed in a workout.
 /// </summary>
-public sealed class ExcerciseWorkoutSet : Entity
+public sealed class ExcerciseSet : Entity
 {
-    public ExcerciseWorkoutSet(
+    private ExcerciseSet(
         Guid id,
         Guid workoutId,
         Guid excerciseId,
@@ -29,4 +29,12 @@ public sealed class ExcerciseWorkoutSet : Entity
     /// Count of how many Exercise-Session needs be completed.
     /// </summary>
     public SetCount SetCount { get; }
+
+    internal static ExcerciseSet Create(
+        Guid workoutId,
+        Guid excerciseId,
+        SetCount setCount)
+    {
+        return new ExcerciseSet(Guid.NewGuid(), workoutId, excerciseId, setCount);
+    }
 }

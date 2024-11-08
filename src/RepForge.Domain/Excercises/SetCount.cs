@@ -1,4 +1,5 @@
-﻿using RepForge.SharedKernel;
+﻿using RepForge.Domain.Excercises.Errors;
+using RepForge.SharedKernel;
 
 namespace RepForge.Domain.Excercises;
 /// <summary>

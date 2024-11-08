@@ -8,8 +8,7 @@ namespace RepForge.Domain.Workouts;
 /// </summary>
 public sealed class Workout : Entity
 {
-    private readonly List<ExcerciseWorkoutSet> _workoutSets = new();
-    private readonly List<WorkoutSession> _workoutSessions = new();
+    private readonly List<ExcerciseSet> _excerciseSetIds = new();
 
     public Workout(
         Guid id,
@@ -18,8 +17,14 @@ public sealed class Workout : Entity
         Name = name;
     }
     public Guid UserId { get; }
-    /// <summary>
-    /// Name of the workout.
-    /// </summary>
     public Name Name { get; }
+    public IReadOnlyList<ExcerciseSet> ExcerciseSets => _excerciseSetIds.ToList();
+
+
+    public void AddExcerciseSet(Guid excerciseId, SetCount setCount)
+    {
+        var excerciseSet = ExcerciseSet.Create(Id, excerciseId, setCount);
+
+        _excerciseSetIds.Add(excerciseSet);
+    }
 }

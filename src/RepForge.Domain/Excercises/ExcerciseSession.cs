@@ -7,7 +7,7 @@ namespace RepForge.Domain.Excercises;
 /// </summary>
 public sealed class ExcerciseSession : Entity
 {
-    public ExcerciseSession(
+    private ExcerciseSession(
         Guid id,
         Guid workoutSessionId,
         Guid excerciseId,
@@ -39,4 +39,12 @@ public sealed class ExcerciseSession : Entity
     /// </summary>
     public Duration Duration { get; }
 
+    internal static ExcerciseSession Create(
+        Guid workoutSessionId,
+        Guid excerciseId,
+        Repetitions repetitions,
+        Duration duration)
+    {
+        return new ExcerciseSession(Guid.NewGuid(), workoutSessionId, excerciseId, repetitions, duration);
+    }
 }
