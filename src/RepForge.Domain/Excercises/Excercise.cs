@@ -30,8 +30,8 @@ public sealed class Excercise : Entity
     /// <param name="userId">Id of the user.</param>
     /// <param name="name">Name of the exercise.</param>
     /// <returns>Returns an valid exercise.</returns>
-    public static Excercise Create(Guid id, Guid userId, Name name)
+    public static Excercise Create(Guid userId, Name name)
     {
-        return new Excercise(id, userId ,name);
+        return new Excercise(Guid.NewGuid(), userId ,name);
     }
 }

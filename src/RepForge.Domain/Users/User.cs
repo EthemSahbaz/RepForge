@@ -12,8 +12,8 @@ public sealed class User : Entity
 
     public Name Name { get; }
 
-    public static User Create(Guid id, Name name)
+    public static User Create(Name name)
     {
-        return new User(id, name);
+        return new User(Guid.NewGuid(), name);
     }
 }
