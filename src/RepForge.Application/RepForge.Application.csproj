@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RepForge.Domain\RepForge.Domain.csproj" />
     <ProjectReference Include="..\RepForge.SharedKernel\RepForge.SharedKernel.csproj" />
   </ItemGroup>
 
