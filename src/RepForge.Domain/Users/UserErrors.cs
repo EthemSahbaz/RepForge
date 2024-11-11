@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 namespace RepForge.Domain.Users;
 public static class UserErrors
 {
+    public static readonly Error NotFound = new(
+    "UserErrors.NotFound",
+    "Can not find an user with provided identifier.");
+
     public static readonly Error WorkoutAlreadyAdded = new(
         "UserErrors.WorkoutAlreadyAdded",
         "Can not add the same workout");
