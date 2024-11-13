@@ -7,7 +7,7 @@ public class NameTests
     [Fact]
     public void Name_With_NullValue_Should_Return_FailureResult()
     {
-        var name = Name.Create(null);
+        var name = Name.Create(null!);
 
         name.IsFailure.Should().BeTrue();
     }

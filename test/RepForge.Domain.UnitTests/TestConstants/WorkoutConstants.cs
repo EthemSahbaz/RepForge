@@ -1,4 +1,5 @@
 ﻿using RepForge.Domain.Shared;
+using RepForge.Domain.Users;
 using RepForge.Domain.Workouts;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,12 @@ internal static class WorkoutConstants
 {
     public static Workout Generate()
     {
-        var workout = new Workout(Guid.NewGuid(), Name.Create("Full Body").Value);
+        var userName = Name.Create("Bill");
+        var user = User.Create(userName.Value);
+
+        var workoutName = Name.Create("Full Body");
+
+        var workout = Workout.Create(user.Id, workoutName.Value);
 
         return workout;
     }
