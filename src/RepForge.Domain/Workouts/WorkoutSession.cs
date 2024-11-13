@@ -10,28 +10,27 @@ namespace RepForge.Domain.Workouts;
 public sealed class WorkoutSession : Entity
 {
     private readonly List<ExcerciseSession> _completedExcercises = new();
-    public WorkoutSession(
+    private WorkoutSession(
         Guid id,
         Guid workoutId) : base(id)
     {
         WorkoutId = workoutId;
     }
     public Guid WorkoutId { get; }
-    public WorkoutState State { get; private set; } = WorkoutState.NotStarted;
+    public WorkoutState State { get; private set; }
     public DateTime StartTime { get; private set; }
     public DateTime EndTime { get; private set; }
 
-    public Result StartSession(DateTime startTime)
+    public static WorkoutSession StartSession(
+        Guid workoutId,
+        DateTime startTime)
     {
-        if (State != WorkoutState.NotStarted)
-        {
-            return Result.Failure(WorkoutSessionErrors.CanNotStart);
-        }
+        var workoutSession = new WorkoutSession(Guid.NewGuid(), workoutId);
 
-        State = WorkoutState.Started;
-        StartTime = startTime;
+        workoutSession.State = WorkoutState.Started;
+        workoutSession.StartTime = startTime;
         
-        return Result.Success();
+        return workoutSession;
     }
 
     public Result FinishSession(DateTime endTime)

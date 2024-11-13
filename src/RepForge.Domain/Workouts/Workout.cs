@@ -10,16 +10,23 @@ public sealed class Workout : Entity
 {
     private readonly List<ExcerciseSet> _excerciseSetIds = new();
 
-    public Workout(
+    private Workout(
         Guid id,
+        Guid userId,
         Name name) : base(id)
     {
         Name = name;
+        UserId = userId;
     }
     public Guid UserId { get; }
     public Name Name { get; }
     public IReadOnlyList<ExcerciseSet> ExcerciseSets => _excerciseSetIds.ToList();
 
+
+    public static Workout Create(Guid userId, Name name)
+    {
+        return new Workout(Guid.NewGuid(), userId, name);
+    }
 
     public void AddExcerciseSet(Guid excerciseId, SetCount setCount)
     {
