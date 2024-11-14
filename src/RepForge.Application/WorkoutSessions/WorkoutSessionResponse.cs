@@ -1,6 +1,6 @@
 ﻿using RepForge.Domain.Workouts;
 
-namespace RepForge.Application.Workouts;
+namespace RepForge.Application.WorkoutSessions;
 
 public sealed record WorkoutSessionResponse(
     Guid Id,

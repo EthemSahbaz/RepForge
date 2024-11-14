@@ -5,4 +5,5 @@ internal interface IWorkoutRepository
 {
     Task AddAsync(Workout workout);
     Task<Workout> GetById(Guid workoutId);
+    Task UpdateAsync(Workout workout);
 }

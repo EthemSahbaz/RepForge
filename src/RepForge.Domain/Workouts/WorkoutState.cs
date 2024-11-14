@@ -2,5 +2,6 @@
 public enum WorkoutState
 {
     Started = 0,
-    Finished = 1
+    Finished = 1,
+    Canceled = 2
 }

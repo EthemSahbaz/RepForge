@@ -4,7 +4,7 @@ using RepForge.Domain.Workouts;
 using RepForge.Domain.Workouts.Errors;
 using RepForge.SharedKernel;
 
-namespace RepForge.Application.Workouts.Start;
+namespace RepForge.Application.WorkoutSessions.Start;
 internal class StartWorkoutSessionCommandHandler
     : ICommandHandler<StartWorkoutSessionCommand, WorkoutSessionResponse>
 {

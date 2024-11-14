@@ -51,6 +51,24 @@ public sealed class WorkoutSession : Entity
         return Result.Success();
     }
 
+    public Result CancelSession(DateTime endTime)
+    {
+        if (State != WorkoutState.Started)
+        {
+            return Result.Failure(WorkoutSessionErrors.CanNotFinish);
+        }
+
+        if (StartTime >= endTime)
+        {
+            return Result.Failure(WorkoutSessionErrors.StartTimeProcedesEndTime);
+        }
+
+        State = WorkoutState.Canceled;
+        EndTime = endTime;
+
+        return Result.Success();
+    }
+
     public Result CompleteExcercise(Guid excerciseId, Repetitions repetitions, Duration duration)
     {
         if (State != WorkoutState.Started)

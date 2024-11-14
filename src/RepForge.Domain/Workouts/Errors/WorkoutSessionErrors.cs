@@ -3,6 +3,9 @@
 namespace RepForge.Domain.Workouts.Errors;
 public static class WorkoutSessionErrors
 {
+    public static readonly Error NotFound = new(
+        "WorkoutSession.NotFound", "Can not find WorkoutSession with provided identifier.");
+
     public static readonly Error CanNotStart = new(
         "WorkoutSession.CanNotStart", "Can not start an ongoing, finished or canceled workout session.");
 
