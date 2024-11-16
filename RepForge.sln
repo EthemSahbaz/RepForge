@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepForge.Infrastructure", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepForge.SharedKernel", "src\RepForge.SharedKernel\RepForge.SharedKernel.csproj", "{164E052E-14C9-4E78-AE5A-3E08CC8C50C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepForge.Domain.UnitTests", "test\RepForge.Domain.UnitTests\RepForge.Domain.UnitTests.csproj", "{30F5265F-17CE-4EDC-89B6-24FC98042EF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepForge.Domain.UnitTests", "test\RepForge.Domain.UnitTests\RepForge.Domain.UnitTests.csproj", "{30F5265F-17CE-4EDC-89B6-24FC98042EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepForge.BlazorHybrid", "src\RepForge.BlazorHybrid\RepForge.BlazorHybrid.csproj", "{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,12 @@ Global
 		{30F5265F-17CE-4EDC-89B6-24FC98042EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30F5265F-17CE-4EDC-89B6-24FC98042EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30F5265F-17CE-4EDC-89B6-24FC98042EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{60C0B136-3F9C-40A8-BAE6-224A31062B8A} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
 		{164E052E-14C9-4E78-AE5A-3E08CC8C50C5} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
 		{30F5265F-17CE-4EDC-89B6-24FC98042EF9} = {023C18D0-6C4B-446A-90E9-151DF6873E1C}
+		{90AC3CDA-EA84-4686-A9C1-B48A99B36B2A} = {32B9213B-FDB6-47A0-95FB-F96550A5DA26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4010D6AA-B684-47C2-9001-566ED5D685E5}
