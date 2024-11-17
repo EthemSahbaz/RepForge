@@ -1,0 +1,17 @@
+﻿@page "/register"
+@layout EmptyLayout
+@inject NavigationManager Navigation
+
+<h1>Username:</h1>
+
+<MudTextField @bind-Value="TextValue" Label="Standard" Variant="Variant.Text"></MudTextField>
+
+<MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Info" @onclick="NavigateTest">Click me</MudButton>
+@code {
+    public string TextValue { get; set; }
+
+    private void NavigateTest()
+    {
+        Navigation.NavigateTo("/");
+    }
+}

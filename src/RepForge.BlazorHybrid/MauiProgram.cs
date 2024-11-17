@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
 
 namespace RepForge.BlazorHybrid;
 public static class MauiProgram
@@ -14,6 +15,7 @@ public static class MauiProgram
             });
 
         builder.Services.AddMauiBlazorWebView();
+        builder.Services.AddMudServices();
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();

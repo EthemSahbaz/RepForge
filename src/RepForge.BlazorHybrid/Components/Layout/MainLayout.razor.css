@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.nav-item .mud-nav-item .mud-nav-link-text {
+    font-weight: bold;
+    background-color: pink;
+}
 .main-content{
     text-align:center;    
 }

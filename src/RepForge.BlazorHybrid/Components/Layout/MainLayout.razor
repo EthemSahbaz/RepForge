@@ -1,13 +1,26 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="main-container">
-    <main class="main-content">
-        <article>
-            @Body
-        </article>
-    </main>
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-    <div class="main-navbar">
-        <NavMenu/>
-    </div>
-</div>
+<MudLayout>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+    <MudAppBar Color="Color.Transparent" Bottom="true">
+        <MudGrid>
+            <MudItem xs="4">
+                <MudNavLink Href="/" Icon="@Icons.Material.Filled.Sports">Workouts</MudNavLink>
+            </MudItem>
+            <MudItem xs="4">
+                <MudNavLink Href="/counter" Icon="@Icons.Material.Filled.Assignment">Excercises</MudNavLink>
+            </MudItem>
+            <MudItem xs="4">
+                <MudNavLink Href="/register" Icon="@Icons.Material.Filled.Build">Settings</MudNavLink>
+            </MudItem>
+        </MudGrid>
+    </MudAppBar>
+
+</MudLayout>
