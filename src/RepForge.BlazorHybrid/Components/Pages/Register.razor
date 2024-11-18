@@ -2,13 +2,14 @@
 @layout EmptyLayout
 @inject NavigationManager Navigation
 
-<h1>Username:</h1>
 
-<MudTextField @bind-Value="TextValue" Label="Standard" Variant="Variant.Text"></MudTextField>
+<MudContainer Class="mx-4 my-4">
+    <MudTextField Placeholder="Username" Class="my-8" @bind-Value="TextValue" Label="Please enter your username" Variant="Variant.Text"></MudTextField>
+    <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Info" @onclick="NavigateTest">Register</MudButton>
+</MudContainer>
 
-<MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Info" @onclick="NavigateTest">Click me</MudButton>
 @code {
-    public string TextValue { get; set; }
+    public string? TextValue { get; set; }
 
     private void NavigateTest()
     {
