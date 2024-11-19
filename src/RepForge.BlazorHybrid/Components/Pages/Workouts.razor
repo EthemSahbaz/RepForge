@@ -1,5 +1,6 @@
-﻿@page "/"
+﻿@page "/workouts"
 @using RepForge.Application.Workouts
+
 <MudCard>
     <MudCardHeader>
         <CardHeaderContent>
@@ -12,7 +13,7 @@
 </MudCard>
 
 <MudContainer Class="my-8">
-    @foreach (var workout in Workouts)
+    @foreach (var workout in WorkoutList)
     {
         <MudCard Class="my-4" Outlined="true">
             <MudCardHeader>
@@ -31,7 +32,7 @@
 </MudContainer>
 
 @code{
-    public List<WorkoutResponse> Workouts { get; set; } = new()
+    public List<WorkoutResponse> WorkoutList { get; set; } = new()
     {
         new WorkoutResponse(Guid.Empty, Guid.Empty,"Full Body"),
         new WorkoutResponse(Guid.Empty, Guid.Empty,"Upper Body"),
