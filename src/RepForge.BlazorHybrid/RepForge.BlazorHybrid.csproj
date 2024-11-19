@@ -58,6 +58,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.4.1" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />
@@ -68,6 +69,7 @@
     <ItemGroup>
       <ProjectReference Include="..\RepForge.Application\RepForge.Application.csproj" />
       <ProjectReference Include="..\RepForge.Domain\RepForge.Domain.csproj" />
+      <ProjectReference Include="..\RepForge.Infrastructure\RepForge.Infrastructure.csproj" />
       <ProjectReference Include="..\RepForge.SharedKernel\RepForge.SharedKernel.csproj" />
     </ItemGroup>
 
