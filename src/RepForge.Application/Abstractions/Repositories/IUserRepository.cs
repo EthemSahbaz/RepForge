@@ -1,7 +1,7 @@
 ﻿using RepForge.Domain.Users;
 
 namespace RepForge.Application.Abstractions.Repositories;
-internal interface IUserRepository
+public interface IUserRepository
 {
     Task AddAsync(User user);
     Task<User> GetByIdAsync(Guid userId);
