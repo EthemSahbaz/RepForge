@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using MediatR
 @using RepForge.Application.Users.Add
+@using RepForge.Application.Users.GetAll
 
 @layout EmptyLayout
 @inject NavigationManager Navigation
@@ -15,6 +16,24 @@
 @code {
     public string? TextValue { get; set; }
 
+
+    protected override async Task OnInitializedAsync()
+    {
+        var getAllUserResult = await Mediator.Send(new GetAllUserQuery());
+
+        if (getAllUserResult.IsFailure)
+        {
+            return;
+        }
+
+        var users = getAllUserResult.Value;
+
+        if (users.Count > 0)
+        {
+            Navigation.NavigateTo("/workouts");
+        }
+
+    }
     private async void AddUser()
     {
         var userResult = await Mediator.Send(new AddUserCommand(TextValue));

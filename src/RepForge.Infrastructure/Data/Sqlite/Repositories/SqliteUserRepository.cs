@@ -9,6 +9,11 @@ internal class SqliteUserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
+    public Task<IReadOnlyList<User>> GetAllAsync()
+    {
+        throw new NotImplementedException();
+    }
+
     public Task<User> GetByIdAsync(Guid userId)
     {
         throw new NotImplementedException();
