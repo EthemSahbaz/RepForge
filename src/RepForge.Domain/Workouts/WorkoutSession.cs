@@ -10,6 +10,7 @@ namespace RepForge.Domain.Workouts;
 public sealed class WorkoutSession : Entity
 {
     private readonly List<ExcerciseSession> _completedExcercises = new();
+    // Maybe change workout model to only accept fully ended sessions?
     private WorkoutSession(
         Guid id,
         Guid workoutId) : base(id)
